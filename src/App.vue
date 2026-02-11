@@ -20,9 +20,9 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/vehiculos">Vehículos</router-link>
             </li>
-            <!--li class="nav-item">
-              <router-link class="nav-link" to="/partes-autos">Partes</router-link>
-            </li-->
+            <li class="nav-item">
+              <router-link class="nav-link" to="../components/AutoCard">Autos</router-link>
+            </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/contacto">Contacto</router-link>
             </li>

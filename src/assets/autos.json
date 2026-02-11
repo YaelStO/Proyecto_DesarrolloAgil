@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "marca": "Hyundai",
+    "modelo": "Atos",
+    "anio": 2005,
+    "precio": "65,000 MXN",
+    "imagen": "https://autolab.com.co/wp-content/uploads/2022/07/atos-hyundai.png",
+    "descripcion": "Compacto, económico y perfecto para ciudad.",
+    "especificaciones": [
+      "Motor: 1.0L 4 cilindros",
+      "Potencia: 58 HP",
+      "Consumo: 18 km/L",
+      "Color: Plata Metálico",
+      "Transmisión: Manual 5 velocidades",
+      "Kilometraje: 125,000 km"
+    ]
+  },
+  {
+    "id": 2,
+    "marca": "Ford",
+    "modelo": "Mustang Shelby GT500",
+    "anio": 1967,
+    "precio": "54,000 USD",
+    "imagen": "https://www.gallery-aaldering.com/wp-content/uploads/2025/02/ford-mustang-shelby-gt-500-fastback-1967.jpg?v=13",
+    "descripcion": "Muscle car clásico con motor 428 Cobra Jet.",
+    "especificaciones": [
+      "Motor: 7.0L V8",
+      "Potencia: 400 HP",
+      "0-100 km/h: 5.8s",
+      "Color: Wimbledon White",
+      "Transmisión: Manual 4 velocidades",
+      "Kilometraje: 28,500 millas"
+    ]
+  },
+  {
+    "id": 3,
+    "marca": "Chevrolet",
+    "modelo": "Camaro",
+    "anio": 1969,
+    "precio": "40,000 USD",
+    "imagen": "https://p.turbosquid.com/ts-thumb/Wj/2KDSQi/7U/chevrolet_camaro_z28_1969_convertible_0000/jpg/1687447780/2500x1406/fit_q99/f82c8e6685ad19cd8d1be2d984738a7755508420/chevrolet_camaro_z28_1969_convertible_0000.jpg",
+    "descripcion": "Rival eterno del Mustang con estilo agresivo.",
+    "especificaciones": [
+      "Motor: 6.5L V8",
+      "Potencia: 375 HP",
+      "0-100 km/h: 6.2s",
+      "Color: Hugger Orange",
+      "Transmisión: Automática",
+      "Kilometraje: 32,100 millas"
+    ]
+  },
+  {
+    "id": 4,
+    "marca": "Chevrolet",
+    "modelo": "Corvette Split Window",
+    "anio": 1963,
+    "precio": "60,000 USD",
+    "imagen": "https://www.excelenciasdelmotor.com/sites/default/files/imagenes-portada-ffp/corvettestingray1963wallpaper-1.jpg",
+    "descripcion": "Legendaria edición especial Split Window.",
+    "especificaciones": [
+      "Motor: 5.4L V8",
+      "Potencia: 360 HP",
+      "0-100 km/h: 5.4s",
+      "Color: Riverside Red",
+      "Transmisión: Manual 4 velocidades",
+      "Edición especial"
+    ]
+  },
+  {
+    "id": 5,
+    "marca": "Chevrolet",
+    "modelo": "Aveo",
+    "anio": 2022,
+    "precio": "13,500 USD",
+    "imagen": "https://static.wixstatic.com/media/3a3da7_c4e20984981346749a4536bdc60d5fe4.jpg",
+    "descripcion": "Sedán accesible, económico y moderno.",
+    "especificaciones": [
+      "Motor: 1.5L 4 cilindros",
+      "Potencia: 98 HP",
+      "0-100 km/h: 12.5s",
+      "Color: Gris Metálico",
+      "Transmisión: Manual 5 velocidades",
+      "Kilometraje: 20,000 km"
+    ]
+  },
+  {
+    "id": 6,
+    "marca": "BMW",
+    "modelo": "M2 Coupé",
+    "precio": "83,000 USD",
+    "imagen": "https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg",
+    "descripcion": "El BMW M2 Coupé representa la entrada al mundo M de la marca bávara. Compacto pero feroz, combina ingeniería alemana con una experiencia de manejo emocionante.",
+    "especificaciones": [
+      "Motor: 3.0L I6 TwinPower Turbo",
+      "Potencia: 460 HP",
+      "0-100 km/h: 4.1 segundos",
+      "Transmisión: Manual 6 vel. / Automática 8 vel.",
+      "Tracción: RWD",
+      "Consumo combinado: 9.0 km/L"
+    ]
+  },
+  {
+    "id": 7,
+    "marca": "Volkswagen",
+    "modelo": "Beetle",
+    "anio": 2003,
+    "precio": "110,000 MXN",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/VW_1302_%282013-09-15_2307_Spu%29.JPG/1920px-VW_1302_%282013-09-15_2307_Spu%29.JPG",
+    "descripcion": "El clásico Volkswagen Beetle modernizado, uno de los autos más icónicos de México con un diseño único.",
+    "especificaciones": [
+      "Motor: 2.0L 4 cilindros",
+      "Potencia: 115 HP",
+      "Consumo: 12 km/L",
+      "Color: Amarillo",
+      "Transmisión: Automática 4 velocidades",
+      "Kilometraje: 95,000 km"
+    ]
+  },
+  {
+    "id": 8,
+    "marca": "Chevrolet",
+    "modelo": "Pickup C10",
+    "anio": 1972,
+    "precio": "28,000 USD",
+    "imagen": "https://cdn.dealeraccelerate.com/streetside/1/11030/541786/1920x1440/1972-chevrolet-c10",
+    "descripcion": "Clásica pickup americana ideal para coleccionistas, restaurada con piezas originales.",
+    "especificaciones": [
+      "Motor: 5.7L V8",
+      "Potencia: 175 HP",
+      "0-100 km/h: 10.2 s",
+      "Color: Medium Red",
+      "Transmisión: Automática Turbo 350",
+      "Kilometraje: 68,400 millas"
+    ]
+  },
+  {
+    "id": 9,
+    "marca": "Chevrolet",
+    "modelo": "Chevy",
+    "anio": 2012,
+    "precio": "145,000 MXN",
+    "imagen": "https://acnews.blob.core.windows.net/imgnews/extralarge/NAZ_6e6d17069f684066a2c971af16e88f51.webp",
+    "descripcion": "Uno de los sedanes más vendidos en México por su excelente relación calidad-precio y mantenimiento económico.",
+    "especificaciones": [
+      "Motor: 1.6L 4 cilindros",
+      "Potencia: 103 HP",
+      "Consumo: 13 km/L",
+      "Color: Rojo",
+      "Transmisión: Automática 4 velocidades",
+      "Kilometraje: 110,000 km"
+    ]
+  },
+  {
+    "id": 10,
+    "marca": "Dodge",
+    "modelo": "Charger",
+    "anio": 1970,
+    "precio": "47,000 USD",
+    "imagen": "https://uncrate.com/assets_c/2024/02/speedkore-dodge-charger-1-thumb-960xauto-170509.jpg",
+    "descripcion": "Icónico muscle car americano, famoso por su potencia y apariciones en películas clásicas. Restaurado manteniendo especificaciones originales.",
+    "especificaciones": [
+      "Motor: 7.2L V8 Hemi",
+      "Potencia: 425 HP",
+      "0-100 km/h: 5.8 segundos",
+      "Color: Negro con franjas plateadas",
+      "Transmisión: Manual 4 velocidades",
+      "Kilometraje: 28,500 millas"
+    ]
+  },
+  {
+    "id": 11,
+    "marca": "Mastretta",
+    "modelo": "MXT",
+    "precio": "58,000 USD",
+    "imagen": "https://runrunes.org/wp-content/uploads/2011/02/1_1-647x432.jpg",
+    "descripcion": "Primer deportivo mexicano de producción. Ligero, ágil y enfocado 100% al manejo deportivo.",
+    "especificaciones": [
+      "Motor: 2.0L turbo Ford Duratec",
+      "Potencia: 250 HP",
+      "0-100 km/h: 4.9 segundos",
+      "Transmisión: Manual 5 velocidades",
+      "Peso: 930 kg"
+    ]
+  },
+  {
+    "id": 12,
+    "marca": "Nissan",
+    "modelo": "NP300",
+    "precio": "18,000 USD",
+    "imagen": "https://www.nissanoaxaca.com.mx/static/agency-go-virtual/Nissan/NP300/2023/Exterior/1.jpg",
+    "descripcion": "Pickup robusta y confiable, ideal para trabajo pesado y uso diario tanto en ciudad como en campo.",
+    "especificaciones": [
+      "Motor: 2.5L 4 cilindros",
+      "Potencia: 166 HP",
+      "0-100 km/h: 11.5 segundos",
+      "Color: Blanco Perlado",
+      "Transmisión: Manual 6 velocidades",
+      "Kilometraje: 15,000 km"
+    ]
+  },
+  {
+    "id": 13,
+    "marca": "Porsche",
+    "modelo": "911 Turbo S",
+    "precio": "230,000 USD",
+    "imagen": "https://hips.hearstapps.com/hmg-prod/images/img-5-6655e9bb8e066.jpg?crop=1xw:1xh;center,top&resize=980:*",
+    "descripcion": "El Porsche 911 Turbo S es la cúspide del rendimiento y lujo dentro de la legendaria gama 911. Combina potencia extrema, aerodinámica avanzada y una ingeniería alemana refinada que lo hace ideal tanto para pista como para el uso diario.",
+    "especificaciones": [
+      "Motor: 3.8L Bóxer Twin-Turbo",
+      "Potencia: 640 HP",
+      "0-100 km/h: 2.7 segundos",
+      "Transmisión: Automática PDK 8 velocidades",
+      "Tracción: AWD",
+      "Consumo: 9.5 km/L"
+    ]
+  }
+]
