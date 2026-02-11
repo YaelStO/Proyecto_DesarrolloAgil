@@ -5,14 +5,18 @@
         <h2>{{ auto.marca }} {{ auto.modelo }} {{ auto.anio }}</h2>
         <h4 class="text-success">{{ auto.precio }}</h4>
 
-        <ul class="list-group my-3">
+        <ul class="list-group list-group-flush">
           <li
-            v-for="(item, index) in auto.especificaciones"
-            :key="index"
+            v-for="(valor, etiqueta) in auto.especificaciones"
+            :key="etiqueta"
             class="list-group-item"
           >
-            {{ item }}
+            <strong class="text-capitalize">{{ etiqueta }}:</strong> {{ valor }}
           </li>
+        </ul>
+
+        <ul>
+          <li v-for="item in auto.caracteristicas" :key="item">{{ item }}</li>
         </ul>
 
         <p>{{ auto.descripcion }}</p>
@@ -30,17 +34,17 @@
 </template>
 
 <script>
-import autos from "../assets/autos.json"
+import autos from "../assets/autos.json";
 
 export default {
   data() {
     return {
-      auto: null
-    }
+      auto: null,
+    };
   },
   mounted() {
-    const id = parseInt(this.$route.params.id)
-    this.auto = autos.find(a => a.id === id)
-  }
-}
+    const id = parseInt(this.$route.params.id);
+    this.auto = autos.find((a) => a.id === id);
+  },
+};
 </script>

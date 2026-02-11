@@ -1,19 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+// 1. Importamos los datos y el componente de la tarjeta
 import vehicles from '../assets/autos.json'
 import VehicleCard from '../components/AutoCard.vue'
 
-// Mostrar solo 6 destacados
-const featuredVehicles = vehicles.slice(0, 6)
+// Seleccionamos solo 3 autos para mostrar como "Destacados" en el Home
+const featuredVehicles = computed(() => {
+  return vehicles.slice(0, 3); // Muestra los primeros 3 del JSON
+});
 
-// Datos dinámicos para las reseñas
 const reviews = ref([
   { id: 1, name: "Carlos Pérez", comment: "Excelente atención y los autos están impecables.", stars: 5 },
   { id: 2, name: "María García", comment: "Compré un SUV y el proceso de envío fue rapidísimo.", stars: 4 },
   { id: 3, name: "Juan Rivas", comment: "Gran variedad de repuestos originales. Muy recomendados.", stars: 5 }
 ])
 
-// Estado del formulario
 const newReview = ref({
   name: '',
   email: '',
@@ -21,9 +22,8 @@ const newReview = ref({
 })
 
 const submitReview = () => {
-  console.log("Datos enviados:", newReview.value)
+  // Corregido el template string con backticks ``
   alert(`¡Gracias ${newReview.value.name} por tu reseña!`)
-  // Limpiar formulario
   newReview.value = { name: '', email: '', comment: '' }
 }
 </script>
@@ -32,22 +32,20 @@ const submitReview = () => {
   <div id="mainCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/img/banner-lavado-autos-moderno_1426-5432.jpg" class="d-block w-100 banner-img" alt="Repuestos">
+        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/YUSNWRNWFFH4DIQS2ASXXIUYFM.jpg" class="d-block w-100 banner-img" alt="Auto deportivo">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-          <h3 class="display-5 fw-bold">Los mejores repuestos</h3>
-          <p>Calidad garantizada para tu vehículo</p>
+          <h3 class="display-5 fw-bold">Deportivos de ensueño</h3>
+          <p>Diseño, velocidad y tecnología de punta</p>
         </div>
       </div>
-
       <div class="carousel-item">
-        <img src="/img/SV-Banner-catalogo.webp" class="d-block w-100 banner-img" alt="Catálogo">
+        <img src="https://www.univision.com/_next/image?url=https%3A%2F%2Fst1.uvnimg.com%2F00%2Fb0%2F9231dea640d18455a1000d245d5a%2F15fordf150-04.jpg&w=1280&q=75" class="d-block w-100 banner-img" alt="Pickup">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-          <h3 class="display-5 fw-bold">Gran catálogo</h3>
-          <p>Todo lo que necesitas en un solo lugar</p>
+          <h3 class="display-5 fw-bold">Pickups robustas</h3>
+          <p>Diseñadas para el trabajo y la aventura</p>
         </div>
       </div>
     </div>
-
     <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
@@ -62,19 +60,13 @@ const submitReview = () => {
       <router-link to="/vehiculos" class="btn btn-outline-primary d-none d-sm-block">Ver todos</router-link>
     </div>
 
-    <div class="row">
-      <div 
-        class="col-12 col-md-6 col-lg-4 mb-4" 
-        v-for="vehicle in featuredVehicles" 
-        :key="vehicle.id"
-      >
-        <div class="h-100 hover-shadow transition">
-          <VehicleCard :vehicle="vehicle" />
-        </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col" v-for="car in featuredVehicles" :key="car.id">
+        <VehicleCard :vehicle="car" />
       </div>
     </div>
 
-    <div class="text-center mt-2 d-sm-none">
+    <div class="text-center mt-4 d-sm-none">
       <router-link to="/vehiculos" class="btn btn-primary w-100">Ver más vehículos</router-link>
     </div>
   </div>
@@ -91,27 +83,41 @@ const submitReview = () => {
 
   <div class="container my-5 py-4">
     <h2 class="text-center mb-5 fw-bold">Opiniones de nuestros clientes</h2>
-
-    <div class="row">
-      <div class="col-md-4 mb-4" v-for="review in reviews" :key="review.id">
-        <div class="card h-100 border-0 shadow-sm review-card">
-          <div class="card-body text-center">
-            <div class="mb-2 text-warning">
-              <span v-for="star in review.stars" :key="star">★</span>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div v-for="(review, index) in reviews" 
+                 :key="review.id" 
+                 class="carousel-item" 
+                 :class="{ active: index === 0 }">
+              <div class="card border-0 shadow-sm review-card mx-auto" style="max-width: 600px;">
+                <div class="card-body text-center p-5">
+                  <div class="mb-3 text-warning fs-3">
+                    <span v-for="n in review.stars" :key="n">★</span>
+                  </div>
+                  <p class="fst-italic fs-5 text-muted">"{{ review.comment }}"</p>
+                  <h5 class="fw-bold mt-4">- {{ review.name }}</h5>
+                </div>
+              </div>
             </div>
-            <p class="fst-italic text-muted">"{{ review.comment }}"</p>
-            <h6 class="fw-bold mb-0">- {{ review.name }}</h6>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
+          </button>
         </div>
       </div>
     </div>
 
     <div class="row justify-content-center mt-5">
       <div class="col-lg-8">
-        <div class="card border-0 shadow">
+        <div class="card border-0 shadow-lg">
           <div class="card-body p-4 p-md-5">
             <h3 class="text-center mb-4 fw-bold">Cuéntanos tu experiencia</h3>
-            
             <form @submit.prevent="submitReview">
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -123,14 +129,12 @@ const submitReview = () => {
                   <input v-model="newReview.email" type="email" class="form-control bg-light border-0" placeholder="juan@correo.com" required>
                 </div>
               </div>
-
               <div class="mb-3">
                 <label class="form-label small fw-bold">Reseña</label>
                 <textarea v-model="newReview.comment" class="form-control bg-light border-0" rows="4" placeholder="¿Qué te pareció nuestro servicio?" required></textarea>
               </div>
-
               <div class="text-center">
-                <button class="btn btn-primary px-5 py-2 fw-bold">Enviar Reseña</button>
+                <button class="btn btn-primary px-5 py-2 fw-bold shadow">Enviar Reseña</button>
               </div>
             </form>
           </div>
@@ -145,27 +149,11 @@ const submitReview = () => {
   height: 500px;
   object-fit: cover;
 }
-
-.transition {
-  transition: all 0.3s ease;
-}
-
-.hover-shadow:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
 .review-card {
-  border-top: 4px solid #0d6efd; /* Color primario de Bootstrap */
+  border-top: 5px solid #0d6efd;
+  border-radius: 15px;
 }
-
-.bg-light {
-  background-color: #f8f9fa !important;
-}
-
 @media (max-width: 768px) {
-  .banner-img {
-    height: 300px;
-  }
+  .banner-img { height: 300px; }
 }
 </style>
