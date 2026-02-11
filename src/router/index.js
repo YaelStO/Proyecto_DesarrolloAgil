@@ -22,10 +22,11 @@ import Mtx from '../Pages/Mtx.vue'
 import Bmw from '../Pages/Bmw.vue'
 import Porche from '../Pages/Porche.vue'
 
-// Importaciones de Views adicionales
+
+
 import Autos from '../views/Autos.vue'
 
-// 2. Importación del componente de Detalle Dinámico
+
 import AutoDetalle from '../components/AutoDetalle.vue'
 
 const routes = [
@@ -45,6 +46,7 @@ const routes = [
     name: 'Autos',
     component: Autos
   },
+  
   {
     path: '/contacto',
     name: 'Contacto',

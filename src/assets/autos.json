@@ -214,5 +214,55 @@
       "Tracción: AWD",
       "Consumo: 9.5 km/L"
     ]
+  },
+  {
+    "id": 7,
+    "marca": "Nissan",
+    "modelo": "Tsuru",
+    "anio": 2015,
+    "precio": "$135,000 MXN",
+    "imagen": "https://cdn.forbes.com.mx/2016/06/tsuru-nissan.jpg",
+    "descripcion": "El legendario Nissan Tsuru, el auto más popular en México por décadas, conocido por su bajo costo de mantenimiento.",
+    "categoria": "mexico",
+    "especificaciones": {
+      "motor": "1.6L 4 cilindros",
+      "potencia": "105 HP",
+      "consumo": "14 km/L",
+      "color": "Blanco",
+      "transmision": "Manual 5 velocidades",
+      "kilometraje": "85,000 km"
+    },
+    "caracteristicas": [
+      "Versión GS 1.6 con aire acondicionado",
+      "Frenos ABS",
+      "Bolsa de aire para conductor",
+      "Servicio reciente completo",
+      "Historial de servicio completo"
+    ]
+  },
+  {
+    "id": 4,
+    "marca": "Shelby",
+    "modelo": "GT500",
+    "anio": 1968,
+    "precio": "$52,000 USD",
+    "imagen": "https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg",
+    "descripcion": "El Shelby GT500 1968 es una leyenda del muscle car americano, con su distintivo diseño y potencia bruta.",
+    "categoria": "clasicos",
+    "especificaciones": {
+      "motor": "7.0L V8 Cobra Jet",
+      "potencia": "355 HP",
+      "aceleracion": "0-100 km/h: 6.5s",
+      "color": "Acapulco Blue",
+      "transmision": "Manual 4 velocidades",
+      "kilometraje": "45,200 millas"
+    },
+    "caracteristicas": [
+      "Motor Cobra Jet 428 con partes de competición",
+      "Franjas de competencia Shelby",
+      "Asientos deportivos con logotipo Shelby",
+      "Rines magnesio originales",
+      "Documentación y chasis verificados"
+    ]
   }
 ]
