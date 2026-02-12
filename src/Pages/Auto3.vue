@@ -1,126 +1,124 @@
-<script></script>
+<script setup>
+</script>
+
 <template>
-    
-<body>
   <main class="container my-5">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mb-4">Chevrolet Corvette 1963</h1>
-        <span class="price-tag mb-3">$60,000 USD</span>
-        
-        <div class="card mb-4">
+        <h1 class="mb-4 fw-bold">Chevrolet Corvette 1963</h1>
+        <div class="price-display mb-4">60,000 MXN</div>
+        <div class="card mb-4 shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-list-alt me-2"></i>Especificaciones</h3>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-list-alt me-2"></i>Especificaciones
+            </h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-tachometer-alt"></i></span>
-                <span>Motor: 5.4L V8</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">0:</span> Motor: 5.4L V8
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-horse"></i></span>
-                <span>Potencia: 360 HP</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">1:</span> Potencia: 360 HP
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-bolt"></i></span>
-                <span>0-100 km/h: 5.4 segundos</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">2:</span> 0-100 km/h: 5.4 segundos
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-paint-brush"></i></span>
-                <span>Color: Riverside Red</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">3:</span> Color: Riverside Red
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-cogs"></i></span>
-                <span>Transmisión: Manual 4 velocidades</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">4:</span> Transmisión: Manual 4 velocidades
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-star"></i></span>
-                <span>Edición especial: Split Window Coupe</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-road"></i></span>
-                <span>Kilometraje: 18,750 millas</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">5:</span> Edición especial: Split Window Coupe
               </li>
             </ul>
           </div>
         </div>
-        
-        <div class="card">
+        <div class="card shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-file-alt me-2"></i>Descripción</h3>
-            <p>La legendaria Corvette "Split Window" 1963 es considerada por muchos coleccionistas como el Corvette más hermoso jamás fabricado, siendo el único año con la ventana trasera dividida.</p>
-            <p>Este ejemplar incluye:</p>
-            <ul>
-              <li>Números de motor y transmisión coincidentes</li>
-              <li>Interior de cuero rojo original</li>
-              <li>Ruedas Knock-off originales</li>
-              <li>Documentación completa desde nuevo</li>
-              <li>Premios en concursos de autos clásicos</li>
-            </ul>
-            <router-link to="/contacto" class="btn btn-inquiry mt-3">
-              <i class="fas fa-envelope me-2"></i>Solicitar información
-            </router-link>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-file-alt me-2"></i>Descripción
+            </h3>
+            <p class="card-text fs-5">
+              Legendaria edición especial Split Window.
+            </p>
           </div>
+        </div>
+        <div class="mt-4">
+          <router-link to="/contacto" class="btn btn-negro btn-lg px-5">
+            <i class="fas fa-envelope me-2"></i>Solicitar información
+          </router-link>
         </div>
       </div>
-      
       <div class="col-lg-6">
-        <img src="https://www.excelenciasdelmotor.com/sites/default/files/sites/default/files/imagenes-portada-ffp/corvettestingray1963wallpaper-1.jpg" class="img-fluid rounded vehicle-img" alt="Chevrolet Corvette 1963">
+        <div class="sticky-top" style="top: 100px;">
+          <img
+            src="https://www.excelenciasdelmotor.com/sites/default/files/sites/default/files/imagenes-portada-ffp/corvettestingray1963wallpaper-1.jpg"
+            class="img-fluid rounded shadow vehicle-img"
+            alt="Chevrolet Corvette 1963"
+          />
+        </div>
       </div>
     </div>
   </main>
-
-  <footer class="bg-dark text-white py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">© 2023 Clásicos Americanos - Todos los derechos reservados</p>
-    </div>
-  </footer>
-
-</body>
-
 </template>
-<style>
-    body {
-      background-color: #f8f9fa;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    main {
-      flex: 1;
-    }
-    .price-tag {
-      background-color: #d4af37;
-      color: black;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      display: inline-block;
-    }
-    .vehicle-img {
-      height: 100%;
-      object-fit: cover;
-      border-radius: 5px;
-      transition: transform 0.3s ease;
-    }
-    .vehicle-img:hover {
-      transform: scale(1.02);
-    }
-    .specs-icon {
-      color: #d4af37;
-      width: 25px;
-      text-align: center;
-      margin-right: 10px;
-    }
-    .btn-inquiry {
-      background-color: #d4af37;
-      color: black;
-      font-weight: bold;
-      border: none;
-      padding: 10px 25px;
-    }
-    .btn-inquiry:hover {
-      background-color: #c9a227;
-      color: black;
-    }
-  </style>
+
+<style scoped>
+.price-display {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+}
+.specs-number {
+  font-weight: 700;
+  color: #000;
+  margin-right: 8px;
+  min-width: 25px;
+  display: inline-block;
+}
+.vehicle-img {
+  transition: transform 0.3s ease;
+}
+.vehicle-img:hover {
+  transform: scale(1.02);
+}
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+.card {
+  border-radius: 12px;
+}
+.btn-negro {
+  background-color: #000;
+  border-color: #000;
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+.btn-negro:hover {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
+  color: white;
+}
+@media (max-width: 768px) {
+  .price-display {
+    font-size: 1.5rem;
+  }
+  .sticky-top {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
+  .list-group-item {
+    font-size: 1rem;
+  }
+}
+</style>

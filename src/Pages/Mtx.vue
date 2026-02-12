@@ -1,61 +1,110 @@
-<script>
-export default {
-  name: "AutoMastrettaMXT",
-};
+<script setup>
 </script>
 
 <template>
   <main class="container my-5">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mb-4">Mastretta MXT</h1>
-        <span class="price-tag mb-3">$58,000 USD</span>
-
-        <div class="card mb-4">
+        <h1 class="mb-4 fw-bold">Mastretta MXT</h1>
+        <div class="price-display mb-4">58,000 MXN</div>
+        <div class="card mb-4 shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-list-alt me-2"></i>Especificaciones</h3>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-list-alt me-2"></i>Especificaciones
+            </h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><i class="fas fa-tachometer-alt me-2"></i>Motor: 2.0L turbo Ford Duratec</li>
-              <li class="list-group-item"><i class="fas fa-horse me-2"></i>Potencia: 250 HP</li>
-              <li class="list-group-item"><i class="fas fa-bolt me-2"></i>0-100 km/h: 4.9 segundos</li>
-              <li class="list-group-item"><i class="fas fa-cogs me-2"></i>Transmisión: Manual 5 velocidades</li>
-              <li class="list-group-item"><i class="fas fa-road me-2"></i>Peso: 930 kg</li>
+              <li class="list-group-item px-0"><span class="specs-number">0:</span> Motor: 2.0L turbo Ford Duratec</li>
+              <li class="list-group-item px-0"><span class="specs-number">1:</span> Potencia: 250 HP</li>
+              <li class="list-group-item px-0"><span class="specs-number">2:</span> 0-100 km/h: 4.9 segundos</li>
+              <li class="list-group-item px-0"><span class="specs-number">3:</span> Transmisión: Manual 5 velocidades</li>
+              <li class="list-group-item px-0"><span class="specs-number">4:</span> Peso: 930 kg</li>
             </ul>
           </div>
         </div>
-
-        <div class="card">
+        <div class="card shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-file-alt me-2"></i>Descripción</h3>
-            <p>
-              El Mastretta MXT es el primer auto deportivo mexicano de producción. Su chasis liviano y enfoque en la experiencia de manejo lo hacen único.
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-file-alt me-2"></i>Descripción
+            </h3>
+            <p class="card-text fs-5">
+              Primer deportivo mexicano de producción. Ligero, ágil y enfocado 100% al manejo deportivo.
             </p>
-            <ul>
-              <li>Diseñado y ensamblado en México</li>
-              <li>Diseño tipo coupé ligero</li>
-              <li>Enfoque 100% deportivo</li>
-              <li>Excelente agarre y balance</li>
-            </ul>
-            <router-link to="/contacto" class="btn btn-inquiry mt-3">
-              <i class="fas fa-envelope me-2"></i>Solicitar información
-            </router-link>
           </div>
+        </div>
+        <div class="mt-4">
+          <router-link to="/contacto" class="btn btn-negro btn-lg px-5">
+            <i class="fas fa-envelope me-2"></i>Solicitar información
+          </router-link>
         </div>
       </div>
-
       <div class="col-lg-6">
-        <img
-          src="https://runrunes.org/wp-content/uploads/2011/02/1_1-647x432.jpg"
-          class="img-fluid rounded vehicle-img"
-          alt="Mastretta MXT"
-        />
+        <div class="sticky-top" style="top: 100px;">
+          <img
+            src="https://runrunes.org/wp-content/uploads/2011/02/1_1-647x432.jpg"
+            class="img-fluid rounded shadow vehicle-img"
+            alt="Mastretta MXT"
+          />
+        </div>
       </div>
     </div>
   </main>
-
-  <footer class="bg-dark text-white py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">© 2023 Vehículos Mexicanos - Todos los derechos reservados</p>
-    </div>
-  </footer>
 </template>
+
+<style scoped>
+.price-display { 
+  font-size: 1.8rem;
+   font-weight: 700; 
+   color: #000; 
+   line-height: 1.2;
+   }
+.specs-number { 
+  font-weight: 700;
+   color: #000;
+    margin-right: 8px;
+     min-width: 25px;
+      display: inline-block;
+     }
+.vehicle-img { 
+  transition: transform 0.3s ease;
+ }
+.vehicle-img:hover {
+   transform: scale(1.02);
+ }
+.list-group-item {
+   border: none;
+    border-bottom: 1px solid #eee;
+     padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+       font-size: 1.1rem; 
+      }
+.list-group-item:last-child {
+   border-bottom: none;
+   }
+.card {
+   border-radius: 12px;
+   }
+.btn-negro { 
+  background-color: #000; 
+  border-color: #000;
+   color: white;
+    padding: 12px 30px;
+    font-weight: 600;
+   }
+.btn-negro:hover { 
+  background-color: #2c2c2c; 
+  border-color: #2c2c2c;
+   color: white; }
+@media (max-width: 768px) {
+  .price-display {
+     font-size: 1.5rem;
+     }
+  .sticky-top { 
+    position: relative;
+     top: 0;
+      margin-top: 2rem;
+     }
+  .list-group-item { 
+    font-size: 1rem;
+   }
+}
+</style>

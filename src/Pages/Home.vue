@@ -1,32 +1,12 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { computed } from 'vue'
 import vehicles from '../assets/autos.json'
 import VehicleCard from '../components/AutoCard.vue'
 
-const featuredVehicles = computed(() => {
-  return vehicles.slice(0, 3);
-});
-
-const reviews = ref([
-  { id: 1, name: "Carlos Pérez", comment: "Excelente atención y los autos están impecables.", stars: 5 },
-  { id: 2, name: "María García", comment: "Compré un SUV y el proceso de envío fue rapidísimo.", stars: 4 },
-  { id: 3, name: "Juan Rivas", comment: "Gran variedad de repuestos originales. Muy recomendados.", stars: 5 }
-])
-
-const newReview = ref({
-  name: '',
-  email: '',
-  comment: ''
-})
-
-const submitReview = () => {
-  alert(`¡Gracias ${newReview.value.name} por tu reseña!`)
-  newReview.value = { name: '', email: '', comment: '' }
-}
+const featuredVehicles = computed(() => vehicles.slice(0, 3))
 </script>
 
 <template>
-
   <div id="mainCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -55,22 +35,17 @@ const submitReview = () => {
   <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="fw-bold">Vehículos Destacados</h2>
-
-      <router-link to="/vehiculos" class="btn btn-outline-negro d-none d-sm-block">
-        Ver todos
-      </router-link>
+      <router-link to="/vehiculos" class="btn btn-outline-negro d-none d-sm-block">Ver todos</router-link>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col" v-for="car in featuredVehicles" :key="car.id">
+      <div v-for="car in featuredVehicles" :key="car.id" class="col">
         <VehicleCard :vehicle="car" />
       </div>
     </div>
 
     <div class="text-center mt-4 d-sm-none">
-      <router-link to="/vehiculos" class="btn btn-negro w-100">
-        Ver más vehículos
-      </router-link>
+      <router-link to="/vehiculos" class="btn btn-negro w-100">Ver más vehículos</router-link>
     </div>
   </div>
 
@@ -83,70 +58,6 @@ const submitReview = () => {
       </router-link>
     </div>
   </div>
-
-  <div class="container my-5 py-4">
-    <h2 class="text-center mb-5 fw-bold">Opiniones de nuestros clientes</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div v-for="(review, index) in reviews" 
-                 :key="review.id" 
-                 class="carousel-item" 
-                 :class="{ active: index === 0 }">
-              <div class="card border-0 shadow-sm review-card mx-auto" style="max-width: 600px;">
-                <div class="card-body text-center p-5">
-                  <div class="mb-3 text-warning fs-3">
-                    <span v-for="n in review.stars" :key="n">★</span>
-                  </div>
-                  <p class="fst-italic fs-5 text-muted">"{{ review.comment }}"</p>
-                  <h5 class="fw-bold mt-4">- {{ review.name }}</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle"></span>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center mt-5">
-      <div class="col-lg-8">
-        <div class="card border-0 shadow-lg">
-          <div class="card-body p-4 p-md-5">
-            <h3 class="text-center mb-4 fw-bold">Cuéntanos tu experiencia</h3>
-            <form @submit.prevent="submitReview">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label class="form-label small fw-bold">Nombre</label>
-                  <input v-model="newReview.name" type="text" class="form-control bg-light border-0" placeholder="Ej. Juan Pérez" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label class="form-label small fw-bold">Correo</label>
-                  <input v-model="newReview.email" type="email" class="form-control bg-light border-0" placeholder="juan@correo.com" required>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label class="form-label small fw-bold">Reseña</label>
-                <textarea v-model="newReview.comment" class="form-control bg-light border-0" rows="4" placeholder="¿Qué te pareció nuestro servicio?" required></textarea>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-negro px-5 py-2 fw-bold shadow">
-                  Enviar Reseña
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <style scoped>
@@ -154,11 +65,9 @@ const submitReview = () => {
   height: 500px;
   object-fit: cover;
 }
-.review-card {
-  border-top: 5px solid #000000;
-  border-radius: 15px;
-}
 @media (max-width: 768px) {
-  .banner-img { height: 300px; }
+  .banner-img {
+    height: 300px;
+  }
 }
 </style>

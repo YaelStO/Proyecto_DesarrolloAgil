@@ -1,123 +1,125 @@
-<script>
-export default {
-  name: 'Chebroletpikup'
-}
+<script setup>
 </script>
 
 <template>
   <main class="container my-5">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mb-4">Chevrolet Pickup C10 1972</h1>
-        <span class="price-tag mb-3">$28,000 USD</span>
-        
-        <div class="card mb-4">
+        <h1 class="mb-4 fw-bold">Chevrolet Pickup C10 1972</h1>
+        <div class="price-display mb-4">28,000 MXN</div>
+        <div class="card mb-4 shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-list-alt me-2"></i>Especificaciones</h3>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-list-alt me-2"></i>Especificaciones
+            </h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-tachometer-alt"></i></span>
-                <span>Motor: 5.7L V8</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-horse"></i></span>
-                <span>Potencia: 175 HP</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-bolt"></i></span>
-                <span>0-100 km/h: 10.2 segundos</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-paint-brush"></i></span>
-                <span>Color: Medium Red</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-cogs"></i></span>
-                <span>Transmisión: Automática Turbo 350</span>
-              </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-road"></i></span>
-                <span>Kilometraje: 68,400 millas</span>
-              </li>
+              <li class="list-group-item px-0"><span class="specs-number">0:</span> Motor: 5.7L V8</li>
+              <li class="list-group-item px-0"><span class="specs-number">1:</span> Potencia: 175 HP</li>
+              <li class="list-group-item px-0"><span class="specs-number">2:</span> 0-100 km/h: 10.2 segundos</li>
+              <li class="list-group-item px-0"><span class="specs-number">3:</span> Color: Medium Red</li>
+              <li class="list-group-item px-0"><span class="specs-number">4:</span> Transmisión: Automática Turbo 350</li>
+              <li class="list-group-item px-0"><span class="specs-number">5:</span> Kilometraje: 68,400 millas</li>
             </ul>
           </div>
         </div>
-        
-        <div class="card">
+        <div class="card shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-file-alt me-2"></i>Descripción</h3>
-            <p>La Chevrolet C10 de 1972 es un clásico americano, perfecta para coleccionistas que buscan un vehículo versátil con estilo vintage.</p>
-            <p>Características destacadas:</p>
-            <ul>
-              <li>Restauración completa con piezas originales</li>
-              <li>Suspensión delantera independiente</li>
-              <li>Asientos bench originales reupholstered</li>
-              <li>Rines Rally originales</li>
-              <li>Certificado de autenticidad</li>
-            </ul>
-            <router-link to="/contacto" class="btn btn-inquiry mt-3">
-              <i class="fas fa-envelope me-2"></i>Solicitar información
-            </router-link>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-file-alt me-2"></i>Descripción
+            </h3>
+            <p class="card-text fs-5">
+              Clásica pickup americana ideal para coleccionistas, restaurada con piezas originales.
+            </p>
           </div>
+        </div>
+        <div class="mt-4">
+          <router-link to="/contacto" class="btn btn-negro btn-lg px-5">
+            <i class="fas fa-envelope me-2"></i>Solicitar información
+          </router-link>
         </div>
       </div>
-      
       <div class="col-lg-6">
-        <img src="https://www.americanmusclecarmuseum.com/files/cars/thumbs/1972-chevrolet-cheyenne-super-4x4-pickup-c10-1-2-ton_7505.jpg" class="img-fluid rounded vehicle-img" alt="Chevrolet C10 1972">
+        <div class="sticky-top" style="top: 100px;">
+          <img
+            src="https://cdn.dealeraccelerate.com/streetside/1/11030/541786/1920x1440/1972-chevrolet-c10"
+            class="img-fluid rounded shadow vehicle-img"
+            alt="Chevrolet Pickup C10 1972"
+          />
+        </div>
       </div>
     </div>
   </main>
-
-  <footer class="bg-dark text-white py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">© 2023 Clásicos Americanos - Todos los derechos reservados</p>
-    </div>
-  </footer>
 </template>
 
 <style scoped>
-body {
-  background-color: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+
+.price-display {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
 }
-main {
-  flex: 1;
-}
-.price-tag {
-  background-color: #28a745;
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
+
+.specs-number {
+  font-weight: 700;
+  color: #000;
+  margin-right: 8px;
+  min-width: 25px;
   display: inline-block;
 }
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.card {
+  border-radius: 12px;
+}
+
 .vehicle-img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
   transition: transform 0.3s ease;
 }
+
 .vehicle-img:hover {
   transform: scale(1.02);
 }
-.specs-icon {
-  color: #28a745;
-  width: 25px;
-  text-align: center;
-  margin-right: 10px;
-}
-.btn-inquiry {
-  background-color: #28a745;
+
+.btn-negro {
+  background-color: #000;
+  border-color: #000;
   color: white;
-  font-weight: bold;
-  border: none;
-  padding: 10px 25px;
+  padding: 12px 30px;
+  font-weight: 600;
 }
-.btn-inquiry:hover {
-  background-color: #218838;
+
+.btn-negro:hover {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
   color: white;
 }
+
+@media (max-width: 768px) {
+  .price-display {
+    font-size: 1.5rem;
+  }
+
+  .sticky-top {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
+
+  .list-group-item {
+    font-size: 1rem;
+  }
+}
+
 </style>

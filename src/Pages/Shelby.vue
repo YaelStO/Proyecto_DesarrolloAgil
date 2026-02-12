@@ -1,132 +1,124 @@
-<script>
-export default {
-  name: 'Shelby'
-}
+<script setup>
 </script>
 
 <template>
   <main class="container my-5">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mb-4">Shelby GT500 1968</h1>
-        <span class="price-tag mb-3">$52,000 USD</span>
-        
-        <div class="card mb-4">
+        <h1 class="mb-4 fw-bold">Shelby GT500 1968</h1>
+        <div class="price-display mb-4">52,000 MXN</div>
+        <div class="card mb-4 shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-list-alt me-2"></i>Especificaciones</h3>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-list-alt me-2"></i>Especificaciones
+            </h3>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-tachometer-alt"></i></span>
-                <span>Motor: 7.0L V8 Cobra Jet</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">0:</span> Motor: 7.0L V8 Cobra Jet
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-horse"></i></span>
-                <span>Potencia: 355 HP</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">1:</span> Potencia: 355 HP
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-bolt"></i></span>
-                <span>0-100 km/h: 6.5 segundos</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">2:</span> 0-100 km/h: 6.5 segundos
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-paint-brush"></i></span>
-                <span>Color: Acapulco Blue</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">3:</span> Color: Acapulco Blue
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-cogs"></i></span>
-                <span>Transmisión: Manual 4 velocidades</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">4:</span> Transmisión: Manual 4 velocidades
               </li>
-              <li class="list-group-item d-flex align-items-center">
-                <span class="specs-icon"><i class="fas fa-road"></i></span>
-                <span>Kilometraje: 45,200 millas</span>
+              <li class="list-group-item px-0">
+                <span class="specs-number">5:</span> Kilometraje: 45,200 millas
               </li>
             </ul>
           </div>
         </div>
-        
-        <div class="card">
+        <div class="card shadow-sm border-0">
           <div class="card-body">
-            <h3 class="card-title"><i class="fas fa-file-alt me-2"></i>Descripción</h3>
-            <p>El Shelby GT500 1968 es una leyenda del muscle car americano, con su distintivo diseño y potencia bruta.</p>
-            <p>Características destacadas:</p>
-            <ul>
-              <li>Motor Cobra Jet 428 cuyas partes fueron diseñadas para competición</li>
-              <li>Franjas de competencia Shelby</li>
-              <li>Asientos deportivos con logotipo Shelby</li>
-              <li>Rines magnesio originales</li>
-              <li>Documentación y números de chasis verificados</li>
-            </ul>
-            <router-link to="/contacto" class="btn btn-inquiry mt-3">
-              <i class="fas fa-envelope me-2"></i>Solicitar información
-            </router-link>
+            <h3 class="card-title h5 fw-bold mb-3">
+              <i class="fas fa-file-alt me-2"></i>Descripción
+            </h3>
+            <p class="card-text fs-5">
+              Leyenda del muscle car americano con diseño y potencia bruta.
+            </p>
           </div>
+        </div>
+        <div class="mt-4">
+          <router-link to="/contacto" class="btn btn-negro btn-lg px-5">
+            <i class="fas fa-envelope me-2"></i>Solicitar información
+          </router-link>
         </div>
       </div>
-      
       <div class="col-lg-6">
-        <img src="https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg" class="img-fluid rounded vehicle-img" alt="Shelby GT500 1968">
-        
+        <div class="sticky-top" style="top: 100px;">
+          <img
+            src="https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg"
+            class="img-fluid rounded shadow vehicle-img"
+            alt="Shelby GT500 1968"
+          />
+        </div>
       </div>
     </div>
   </main>
-
-  <footer class="bg-dark text-white py-4 mt-auto">
-    <div class="container text-center">
-      <p class="mb-0">© 2023 Clásicos Americanos - Todos los derechos reservados</p>
-    </div>
-  </footer>
 </template>
 
 <style scoped>
-body {
-  background-color: #f8f9fa;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.price-display {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
 }
-main {
-  flex: 1;
-}
-.price-tag {
-<<<<<<< HEAD
-  background-color: #3b10ca;
-=======
-  background-color: #000000;
->>>>>>> e6ad102a568233a403e3ffdb63dfc0fdeb2dd408
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
+.specs-number {
+  font-weight: 700;
+  color: #000;
+  margin-right: 8px;
+  min-width: 25px;
   display: inline-block;
 }
 .vehicle-img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
   transition: transform 0.3s ease;
 }
 .vehicle-img:hover {
   transform: scale(1.02);
 }
-.specs-icon {
-  color: #000000;
-  width: 25px;
-  text-align: center;
-  margin-right: 10px;
-}
-.btn-inquiry {
-  background-color: #000000;
-  color: white;
-  font-weight: bold;
+.list-group-item {
   border: none;
-  padding: 10px 25px;
+  border-bottom: 1px solid #eee;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
 }
-.btn-inquiry:hover {
-<<<<<<< HEAD
-  background-color: #1c189c;
-=======
-  background-color: #000000;
->>>>>>> e6ad102a568233a403e3ffdb63dfc0fdeb2dd408
+.list-group-item:last-child {
+  border-bottom: none;
+}
+.card {
+  border-radius: 12px;
+}
+.btn-negro {
+  background-color: #000;
+  border-color: #000;
   color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+}
+.btn-negro:hover {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
+  color: white;
+}
+@media (max-width: 768px) {
+  .price-display {
+    font-size: 1.5rem;
+  }
+  .sticky-top {
+    position: relative;
+    top: 0;
+    margin-top: 2rem;
+  }
+  .list-group-item {
+    font-size: 1rem;
+  }
 }
 </style>
