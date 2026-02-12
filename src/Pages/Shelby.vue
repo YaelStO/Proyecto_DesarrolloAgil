@@ -87,7 +87,11 @@ main {
   flex: 1;
 }
 .price-tag {
+<<<<<<< HEAD
   background-color: #3b10ca;
+=======
+  background-color: #000000;
+>>>>>>> e6ad102a568233a403e3ffdb63dfc0fdeb2dd408
   color: white;
   padding: 5px 15px;
   border-radius: 20px;
@@ -118,7 +122,11 @@ main {
   padding: 10px 25px;
 }
 .btn-inquiry:hover {
+<<<<<<< HEAD
   background-color: #1c189c;
+=======
+  background-color: #000000;
+>>>>>>> e6ad102a568233a403e3ffdb63dfc0fdeb2dd408
   color: white;
 }
 </style>
