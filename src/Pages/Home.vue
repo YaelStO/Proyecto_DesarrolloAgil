@@ -1,12 +1,10 @@
 <script setup>
 import { ref, computed } from 'vue'
-// 1. Importamos los datos y el componente de la tarjeta
 import vehicles from '../assets/autos.json'
 import VehicleCard from '../components/AutoCard.vue'
 
-// Seleccionamos solo 3 autos para mostrar como "Destacados" en el Home
 const featuredVehicles = computed(() => {
-  return vehicles.slice(0, 3); // Muestra los primeros 3 del JSON
+  return vehicles.slice(0, 3);
 });
 
 const reviews = ref([
@@ -22,13 +20,13 @@ const newReview = ref({
 })
 
 const submitReview = () => {
-  // Corregido el template string con backticks ``
   alert(`¡Gracias ${newReview.value.name} por tu reseña!`)
   newReview.value = { name: '', email: '', comment: '' }
 }
 </script>
 
 <template>
+
   <div id="mainCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -57,7 +55,10 @@ const submitReview = () => {
   <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="fw-bold">Vehículos Destacados</h2>
-      <router-link to="/vehiculos" class="btn btn-outline-primary d-none d-sm-block">Ver todos</router-link>
+
+      <router-link to="/vehiculos" class="btn btn-outline-negro d-none d-sm-block">
+        Ver todos
+      </router-link>
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -67,11 +68,13 @@ const submitReview = () => {
     </div>
 
     <div class="text-center mt-4 d-sm-none">
-      <router-link to="/vehiculos" class="btn btn-primary w-100">Ver más vehículos</router-link>
+      <router-link to="/vehiculos" class="btn btn-negro w-100">
+        Ver más vehículos
+      </router-link>
     </div>
   </div>
 
-  <div class="bg-primary text-white py-5 mt-5 shadow-lg">
+  <div class="bg-negro text-white py-5 mt-5 shadow-lg">
     <div class="container text-center">
       <h3 class="fw-bold">¿Buscas un modelo específico?</h3>
       <p class="lead">Nuestro equipo te ayudará a encontrar el auto de tus sueños.</p>
@@ -134,7 +137,9 @@ const submitReview = () => {
                 <textarea v-model="newReview.comment" class="form-control bg-light border-0" rows="4" placeholder="¿Qué te pareció nuestro servicio?" required></textarea>
               </div>
               <div class="text-center">
-                <button class="btn btn-primary px-5 py-2 fw-bold shadow">Enviar Reseña</button>
+                <button class="btn btn-negro px-5 py-2 fw-bold shadow">
+                  Enviar Reseña
+                </button>
               </div>
             </form>
           </div>
@@ -150,7 +155,7 @@ const submitReview = () => {
   object-fit: cover;
 }
 .review-card {
-  border-top: 5px solid #0d6efd;
+  border-top: 5px solid #000000;
   border-radius: 15px;
 }
 @media (max-width: 768px) {

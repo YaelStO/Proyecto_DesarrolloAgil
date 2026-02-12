@@ -1,6 +1,4 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-
 defineProps({
   vehicle: Object
 })
@@ -20,12 +18,9 @@ defineProps({
       
       <div class="mt-auto">
         <p class="fw-bold mb-3" v-if="vehicle.precio">{{ vehicle.precio }}</p>
-        <RouterLink
-          :to="`/autos/${vehicle.id}`"
-          class="btn btn-primary px-4"
-        >
+        <router-link :to="`/auto/${vehicle.id}`" class="btn btn-negro mt-auto">
           Ver detalles
-        </RouterLink>
+        </router-link>
       </div>
     </div>
   </div>
@@ -43,7 +38,7 @@ defineProps({
 }
 
 .img-wrapper {
-  height: 200px; /* Altura fija para que todas las fotos se alineen */
+  height: 200px;
   overflow: hidden;
   background-color: #f0f0f0;
 }
@@ -51,11 +46,6 @@ defineProps({
 .card-img-top {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Esto evita que las fotos se estiren feo */
-}
-
-.btn-primary {
-  border-radius: 5px;
-  font-weight: 500;
+  object-fit: cover;
 }
 </style>

@@ -21,7 +21,7 @@
     "marca": "Ford",
     "modelo": "Mustang Shelby GT500",
     "anio": 1967,
-    "precio": "54,000 USD",
+    "precio": "54,000 MXN",
     "imagen": "https://www.gallery-aaldering.com/wp-content/uploads/2025/02/ford-mustang-shelby-gt-500-fastback-1967.jpg?v=13",
     "descripcion": "Muscle car clásico con motor 428 Cobra Jet.",
     "especificaciones": [
@@ -38,7 +38,7 @@
     "marca": "Chevrolet",
     "modelo": "Camaro",
     "anio": 1969,
-    "precio": "40,000 USD",
+    "precio": "40,000 MXN",
     "imagen": "https://p.turbosquid.com/ts-thumb/Wj/2KDSQi/7U/chevrolet_camaro_z28_1969_convertible_0000/jpg/1687447780/2500x1406/fit_q99/f82c8e6685ad19cd8d1be2d984738a7755508420/chevrolet_camaro_z28_1969_convertible_0000.jpg",
     "descripcion": "Rival eterno del Mustang con estilo agresivo.",
     "especificaciones": [
@@ -55,7 +55,7 @@
     "marca": "Chevrolet",
     "modelo": "Corvette Split Window",
     "anio": 1963,
-    "precio": "60,000 USD",
+    "precio": "60,000 MXN",
     "imagen": "https://www.excelenciasdelmotor.com/sites/default/files/imagenes-portada-ffp/corvettestingray1963wallpaper-1.jpg",
     "descripcion": "Legendaria edición especial Split Window.",
     "especificaciones": [
@@ -72,7 +72,7 @@
     "marca": "Chevrolet",
     "modelo": "Aveo",
     "anio": 2022,
-    "precio": "13,500 USD",
+    "precio": "13,500 MXN",
     "imagen": "https://static.wixstatic.com/media/3a3da7_c4e20984981346749a4536bdc60d5fe4.jpg",
     "descripcion": "Sedán accesible, económico y moderno.",
     "especificaciones": [
@@ -88,7 +88,7 @@
     "id": 6,
     "marca": "BMW",
     "modelo": "M2 Coupé",
-    "precio": "83,000 USD",
+    "precio": "83,000 MXN",
     "imagen": "https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg",
     "descripcion": "El BMW M2 Coupé representa la entrada al mundo M de la marca bávara. Compacto pero feroz, combina ingeniería alemana con una experiencia de manejo emocionante.",
     "especificaciones": [
@@ -122,7 +122,7 @@
     "marca": "Chevrolet",
     "modelo": "Pickup C10",
     "anio": 1972,
-    "precio": "28,000 USD",
+    "precio": "28,000 MXN",
     "imagen": "https://cdn.dealeraccelerate.com/streetside/1/11030/541786/1920x1440/1972-chevrolet-c10",
     "descripcion": "Clásica pickup americana ideal para coleccionistas, restaurada con piezas originales.",
     "especificaciones": [
@@ -156,7 +156,7 @@
     "marca": "Dodge",
     "modelo": "Charger",
     "anio": 1970,
-    "precio": "47,000 USD",
+    "precio": "47,000 MXN",
     "imagen": "https://uncrate.com/assets_c/2024/02/speedkore-dodge-charger-1-thumb-960xauto-170509.jpg",
     "descripcion": "Icónico muscle car americano, famoso por su potencia y apariciones en películas clásicas. Restaurado manteniendo especificaciones originales.",
     "especificaciones": [
@@ -172,7 +172,7 @@
     "id": 11,
     "marca": "Mastretta",
     "modelo": "MXT",
-    "precio": "58,000 USD",
+    "precio": "58,000 MXN",
     "imagen": "https://runrunes.org/wp-content/uploads/2011/02/1_1-647x432.jpg",
     "descripcion": "Primer deportivo mexicano de producción. Ligero, ágil y enfocado 100% al manejo deportivo.",
     "especificaciones": [
@@ -187,7 +187,7 @@
     "id": 12,
     "marca": "Nissan",
     "modelo": "NP300",
-    "precio": "18,000 USD",
+    "precio": "18,000 MXN",
     "imagen": "https://www.nissanoaxaca.com.mx/static/agency-go-virtual/Nissan/NP300/2023/Exterior/1.jpg",
     "descripcion": "Pickup robusta y confiable, ideal para trabajo pesado y uso diario tanto en ciudad como en campo.",
     "especificaciones": [
@@ -203,7 +203,7 @@
     "id": 13,
     "marca": "Porsche",
     "modelo": "911 Turbo S",
-    "precio": "230,000 USD",
+    "precio": "230,000 MXN",
     "imagen": "https://hips.hearstapps.com/hmg-prod/images/img-5-6655e9bb8e066.jpg?crop=1xw:1xh;center,top&resize=980:*",
     "descripcion": "El Porsche 911 Turbo S es la cúspide del rendimiento y lujo dentro de la legendaria gama 911. Combina potencia extrema, aerodinámica avanzada y una ingeniería alemana refinada que lo hace ideal tanto para pista como para el uso diario.",
     "especificaciones": [
@@ -245,7 +245,7 @@
     "marca": "Shelby",
     "modelo": "GT500",
     "anio": 1968,
-    "precio": "$52,000 USD",
+    "precio": "$52,000 MXN",
     "imagen": "https://revologycars.com/wp-content/uploads/2024/10/1967-revology-shelby-gt500-243-02-1024x683.jpg",
     "descripcion": "El Shelby GT500 1968 es una leyenda del muscle car americano, con su distintivo diseño y potencia bruta.",
     "categoria": "clasicos",

@@ -2,10 +2,9 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
       <div class="container-fluid">
-
         <router-link class="navbar-brand ms-2 ms-md-4" to="/">
           <img 
-            src="/img/logo1.png" 
+            src="/img/logo.png" 
             alt="AutosMX" 
             height="80" 
             class="d-inline-block align-top"
@@ -28,9 +27,6 @@
             </li>
             <li class="nav-item">
               <router-link class="nav-link px-3" to="/vehiculos">Vehículos</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link px-3" to="../components/AutoCard">Autos</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link px-3" to="/contacto">Contacto</router-link>
@@ -78,7 +74,6 @@ export default {
 </script>
 
 <style>
-
 body {
   padding-top: 96px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -129,5 +124,31 @@ body {
 
 footer {
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-negro {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}
+.btn-negro:hover {
+  background-color: #2c2c2c;
+  border-color: #2c2c2c;
+  color: white;
+}
+
+.btn-outline-negro {
+  border-color: #000000;
+  color: #000000;
+  background-color: transparent;
+}
+.btn-outline-negro:hover {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}
+
+.bg-negro {
+  background-color: #000000 !important;
 }
 </style>
