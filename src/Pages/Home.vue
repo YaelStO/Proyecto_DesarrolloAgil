@@ -150,7 +150,7 @@ const submitReview = () => {
   object-fit: cover;
 }
 .review-card {
-  border-top: 5px solid #0d6efd;
+  border-top: 5px solid #000000;
   border-radius: 15px;
 }
 @media (max-width: 768px) {

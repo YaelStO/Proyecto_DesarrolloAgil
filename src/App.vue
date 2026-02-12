@@ -29,9 +29,9 @@
             <li class="nav-item">
               <router-link class="nav-link px-3" to="/vehiculos">Vehículos</router-link>
             </li>
-            <li class="nav-item">
+            <!--li class="nav-item">
               <router-link class="nav-link px-3" to="../components/AutoCard">Autos</router-link>
-            </li>
+            </!--li-->
             <li class="nav-item">
               <router-link class="nav-link px-3" to="/contacto">Contacto</router-link>
             </li>

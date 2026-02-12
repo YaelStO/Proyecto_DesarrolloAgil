@@ -87,7 +87,7 @@ main {
   flex: 1;
 }
 .price-tag {
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   padding: 5px 15px;
   border-radius: 20px;
@@ -105,20 +105,20 @@ main {
   transform: scale(1.02);
 }
 .specs-icon {
-  color: #007bff;
+  color: #000000;
   width: 25px;
   text-align: center;
   margin-right: 10px;
 }
 .btn-inquiry {
-  background-color: #007bff;
+  background-color: #000000;
   color: white;
   font-weight: bold;
   border: none;
   padding: 10px 25px;
 }
 .btn-inquiry:hover {
-  background-color: #0069d9;
+  background-color: #000000;
   color: white;
 }
 </style>
